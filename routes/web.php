@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 //    return str()->slug('hello amin its laravel 9!');
-    return view('welcome');
+//    return view('welcome');
+    throw new Exception('Whoops');
 })->name('home');
 
 Route::get('/endpoint', function () {
