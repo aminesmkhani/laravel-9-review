@@ -15,7 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+//    return str()->slug('hello amin its laravel 9!');
     return view('welcome');
+})->name('home');
+
+Route::get('/endpoint', function () {
+ //   return redirect('/');
+    return to_route('home');
 });
 
 Route::controller(PostController::class)->group(function (){
